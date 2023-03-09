@@ -16,9 +16,32 @@ body {
 }
 .list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  /* outline: 2px solid tomato; */
+}
+.section {
+  padding-bottom: 120px;
 }
 /* ----------хедер------------- */
-
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+}
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -28,6 +51,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--logocolor--);
+  margin-right: 76px;
 }
 
 .color-logo-header {
@@ -38,6 +62,14 @@ body {
 }
 
 .main-nav {
+  display: flex;
+}
+
+.main-nav-list {
+  display: flex;
+  gap: 40px;
+}
+.menu-nav-item {
 }
 .main-nav-link {
   font-family: 'Roboto', sans-serif;
@@ -52,14 +84,23 @@ body {
   color: #404bbf;
 }
 .address {
+  display: flex;
   font-style: normal;
 }
+.contact-list {
+  display: flex;
+  gap: 40px;
+}
+
 .contact-link {
+  display: block;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: 0.02em;
   color: #434455;
+}
+.contact-item {
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -69,19 +110,29 @@ body {
 /* --------------секция герой----------- */
 
 .hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
   background-color: #2e2f42;
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
+  outline-color: white;
+  width: 496px;
 }
 
 .hero-btn {
+  border: 0px solid transparent;
+  min-width: 169px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  text-align: center;
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
@@ -95,10 +146,26 @@ body {
 
 /*----------- о нас скрыть заголовок----------*/
 .about {
+  padding-top: 133px;
 }
 .about-title {
+  margin: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .about-list {
+  display: flex;
+  gap: 24px;
 }
 .about-item {
 }
@@ -126,6 +193,16 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--title-color--);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 72px;
+}
+.work-list {
+  display: flex;
+  gap: 24px;
+}
+.work-item {
+  flex-basis: calc((100% - 48px) / 3);
 }
 
 /* наша команда */
@@ -140,10 +217,15 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--title-color--);
+  margin: 0;
+  margin-bottom: 72px;
 }
 .team-list {
+  display: flex;
+  gap: 24px;
 }
 .team-item {
+  flex-basis: calc((100%-92px) / 4);
 }
 .team-item-title {
   font-weight: 500;
@@ -165,11 +247,18 @@ body {
 
 .footer {
   background: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-text {
   font-size: 16px;
-  color: #e7e9fc;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  width: 264px;
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 /* -----------страница портфолио------------ */
 
