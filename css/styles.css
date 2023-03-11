@@ -10,7 +10,15 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
 }
-
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+}
 .link {
   text-decoration: none;
 }
@@ -25,11 +33,10 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-
   /* outline: 2px solid tomato; */
 }
 .section {
+  padding-top: 120px;
   padding-bottom: 120px;
 }
 /* ----------хедер------------- */
@@ -41,6 +48,7 @@ body {
 .container-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -63,13 +71,15 @@ body {
 
 .main-nav {
   display: flex;
+  align-items: center;
 }
 
 .main-nav-list {
   display: flex;
-  gap: 40px;
+  align-items: center;
 }
-.menu-nav-item {
+.main-nav-item:not(:last-child) {
+  margin-right: 40px;
 }
 .main-nav-link {
   font-family: 'Roboto', sans-serif;
@@ -85,11 +95,12 @@ body {
 }
 .address {
   display: flex;
+  align-items: center;
   font-style: normal;
 }
 .contact-list {
   display: flex;
-  gap: 40px;
+  align-items: center;
 }
 
 .contact-link {
@@ -100,7 +111,8 @@ body {
   letter-spacing: 0.02em;
   color: #434455;
 }
-.contact-item {
+.contact-item:first-child {
+  margin-right: 40px;
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -118,21 +130,25 @@ body {
 .hero-title {
   margin-top: 0;
   margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #ffffff;
-  outline-color: white;
   width: 496px;
 }
 
 .hero-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border: 0px solid transparent;
   min-width: 169px;
   padding: 16px 32px;
   border-radius: 4px;
-  text-align: center;
+
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
@@ -175,6 +191,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-color--);
+  margin-bottom: 8px;
 }
 .about-text {
   font-size: 16px;
@@ -184,7 +201,9 @@ body {
 }
 
 /* наши работы */
-
+.work {
+  padding-bottom: 120px;
+}
 .work-title {
   font-weight: 700;
   font-size: 36px;
@@ -208,6 +227,7 @@ body {
 /* наша команда */
 
 .team {
+  background: #f4f4fd;
 }
 .team-title {
   font-weight: 700;
@@ -234,6 +254,8 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--title-color--);
+  padding-top: 32px;
+  margin-bottom: 8px;
 }
 .team-text {
   font-size: 16px;
@@ -241,6 +263,13 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--text-color--);
+}
+.team-item-card {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  padding-bottom: 32px;
+  border-top: 0;
 }
 
 /* --футер--- */
@@ -265,8 +294,13 @@ body {
 /* фильтр кнопки */
 
 .filter-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
 .filter-item {
+  padding-bottom: 72px;
 }
 .filter-btn {
   font-family: inherit;
@@ -275,26 +309,38 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  display: flex;
-  align-items: center;
   text-align: center;
   color: #4d5ae5;
   background: #f4f4fd;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
   cursor: pointer;
+  padding: 12px 24px;
 }
 .filter-btn:hover,
 .filter-btn:focus {
   color: #ffffff;
   background: #404bbf;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project {
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 .project-title {
 }
 .project-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+  flex-grow: 0;
 }
 .project-item {
+  flex-basis: calc((100% - 48) / 3);
 }
 .project-link-title {
   font-weight: 500;
@@ -302,6 +348,9 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-color--);
+  margin-bottom: 8px;
+  padding-left: 16px;
+  padding-right: auto;
 }
 
 .project-link-text {
@@ -309,4 +358,14 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color--);
+  padding-left: 16px;
+  padding-right: auto;
+}
+.project-item-card {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border: 1px solid #e7e9fc;
+  border-top: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
